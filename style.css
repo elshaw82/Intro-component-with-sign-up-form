@@ -99,9 +99,21 @@ input {
     position: relative;
 }
 
+input > text {
+    color:#949494;
+}
+
 input:first-child {
     font-weight: 600;
     color: #000000 !important;
+}
+
+input:focus {
+    border: 1px solid #949494;
+}
+
+input:hover {
+    border: 1px solid #949494;
 }
 
 .error-icon {
