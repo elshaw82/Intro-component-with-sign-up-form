@@ -51,7 +51,7 @@ p {
 }
 
 #button-top {
-    width: 400px;
+    width: 380px;
     margin-right:100px;
     margin-bottom: 25px;
     background-color: hsl(248, 32%, 49%);
@@ -66,6 +66,7 @@ p {
 #button-top:hover {
     background-color: hsl(248, 41%, 45%);
     cursor: pointer;
+    box-shadow:0 4px 4px  hsl(0, 62%, 57%);
 }
 
 #button-top > span {
@@ -76,7 +77,7 @@ p {
 form {
     display:flex;
     flex-direction: column;
-    min-width: 400px;
+    max-width: 400px;
     margin-right: 100px;
     padding:25px;
     background-color: #ffffff;
@@ -154,4 +155,107 @@ small {
 small > span {
     color:hsl(0, 100%, 74%) ;
     font-weight:600;
+}
+
+/* mobile styles */
+
+@media only screen and (max-width: 700px) {
+
+    body {
+        margin:0;
+        background-image: url("/images/bg-intro-mobile.png");
+        background-size: cover;
+        background-color: hsl(0, 100%, 74%) ;
+    }
+
+   #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner {
+        max-width: 85%;
+        text-align: center;
+        margin:0 auto;    
+    }
+
+    .left {
+        flex-direction: column;
+        flex: 1;
+        width:100%;
+    }
+
+    h1 {
+        padding-top:50px;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    p {
+        font-size:14px;
+        line-height: 25px;
+    }
+
+    .right {
+        flex:2;
+        width:100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    p {
+        margin-bottom:50px;
+    }
+
+    #button-top {
+        max-width:280px;
+        margin:auto;
+        background-color: hsl(248, 32%, 49%);
+        border-radius: 8px;
+        padding:15px 60px 15px 60px;
+        text-align: center;
+        color:#ffffff;
+        box-shadow: 0 5px 5px  hsl(0, 62%, 57%);
+        font-family:'Poppins', sans-serif;
+        font-size: 12px;
+    }
+    
+    #button-top:hover {
+        background-color: hsl(248, 41%, 45%);
+        cursor: pointer;
+        box-shadow:0 4px 4px  hsl(0, 62%, 57%);
+    }
+    
+    #button-top > span {
+        font-weight:500;
+        font-size: 12px;
+    }
+    
+    form {
+        display:flex;
+        flex-direction: column;
+        max-width: 280px;
+        padding:25px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 5px 5px  hsl(0, 62%, 57%);  
+        margin: 15px auto;
+    }
+
+    
+    input {
+        height:35px;
+        border-radius: 4px;
+        outline: none;
+        border:solid thin hsl(246, 25%, 77%);
+        box-shadow: none;
+        margin-top:10px;
+        padding-left: 20px;
+        color:hsl(246, 25%, 77%);
+        font-family: 'Poppins', sans-serif;
+        font-size:12px;
+        position: relative;
+}
+
 }
